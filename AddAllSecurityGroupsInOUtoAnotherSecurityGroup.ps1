@@ -1,0 +1,1 @@
+﻿Get-ADGroup -SearchBase 'OU=East Region Office Administration,OU=.Security Groups,DC=tabitha,DC=org' -Filter * | ForEach-Object {Add-ADPrincipalGroupMembership -Identity $_ -MemberOf 'RGP_East'}

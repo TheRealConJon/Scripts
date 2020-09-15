@@ -1,0 +1,1 @@
+<CyberReason64> /install /quiet /norestart -l <C:\LocalScripts>

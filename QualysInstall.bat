@@ -1,0 +1,1 @@
+Qualys.exe CustomerId={2ec1b7bd-e5fb-4a65-81b1-fc64fb61b6d0} ActivationId={4eba33f9-1b28-4dd7-aec5-4d6bccb498bb}

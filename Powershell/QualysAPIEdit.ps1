@@ -1,5 +1,5 @@
-﻿$username = "amert2ch3"
-$password = "CRDvda6MF4!$"
+﻿$username = "username"
+$password = "password"
 $authInfo = [System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes("$username`:$password"))
 $headers = @{"X-Requested-With"="powershell";"Authorization"="Basic $authInfo";"Accept"="application/json"}
 

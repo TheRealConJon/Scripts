@@ -1,0 +1,1 @@
+MsiExec.exe /x {B1F5BD04-45F0-4342-97A4-039DF718D548} /qb /qn

@@ -1,0 +1,1 @@
+﻿Add-ADGroupMember -Identity 'RGP_PreceptorGroup_Education' -Members (Get-ADGroupMember -Identity 'TNRC Preceptor Group' -Recursive)

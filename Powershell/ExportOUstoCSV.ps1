@@ -1,0 +1,9 @@
+﻿$OUS = "OU=Admin,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Admin,OU=Central,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Aides,OU=Central,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Bereavement,OU=Central,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Nursing,OU=Central,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Social Services,OU=Central,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Volunteers,OU=Central,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Admin,OU=East,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Aides,OU=East,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Bereavement,OU=East,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Nursing,OU=East,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Social Services,OU=East,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Admin,OU=Lancaster,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Aides,OU=Lancaster,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Bereavement,OU=Lancaster,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Nursing,OU=Lancaster,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Socl Services,OU=Lancaster,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Volunteers,OU=Lancaster,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Admin,OU=West,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Aides,OU=West,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Bereavement,OU=West,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=Nursing,OU=West,OU=Hospice,OU=.Departments,DC=tabitha,DC=org","OU=SocialServices,OU=West,OU=Hospice,OU=.Departments,DC=tabitha,DC=org"
+
+$result = 
+foreach($OU in $OUS){
+    Get-AdUser -filter "enabled -eq 'true'"  -SearchBase $OU -Properties DisplayName,GivenName,sn,Mail,Description | 
+    select-object DisplayName,GivenName,sn,Mail,Description
+}
+
+$result | export-csv "C:\ExportFromAD.csv" -NoTypeInformation

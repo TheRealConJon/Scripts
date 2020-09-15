@@ -1,0 +1,1 @@
+get-appxpackage -allusers | remove-appxpackage

@@ -1,0 +1,2 @@
+﻿$list = Import-Csv -Path C:\RegroupStaffingSecurityGroups.csv
+$list | foreach {New-ADGroup -Name $_.DistinguishedName -GroupCategory Security -GroupScope Universal -Path "OU=.Regroup Security Groups,OU=.Security Groups,DC=tabitha,DC=org" -Description "Groups to Upload to Regroup for the Safety Department to use"}

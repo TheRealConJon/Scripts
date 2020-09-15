@@ -1,0 +1,1 @@
+Test-ComputerSecureChannel -credential tabitha.org\*adminuser* -repair
